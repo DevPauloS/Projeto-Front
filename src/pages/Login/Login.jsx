@@ -13,10 +13,7 @@ function Login() {
       const login = await api.post("/login", {
         email: emailRef.current.value,
         password: passwordRef.current.value,
-      });
-
-      localStorage.setItem("token", token);
-      navigate("/listar-usuarios");
+      });      
     } catch (error) {
       alert("Senha e/ou e-mail incorretos!");
     }
