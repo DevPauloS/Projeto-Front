@@ -1,8 +1,8 @@
-import { Link , Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import api from "../../services/api";
 
-function Login() {  
+function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
@@ -10,14 +10,13 @@ function Login() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const login = await api.post("/login", {        
+      const login = await api.post("/login", {
         email: emailRef.current.value,
-        password: passwordRef.current.value
+        password: passwordRef.current.value,
       });
-      
-      localStorage.setItem('token', token)      
-      navigate('/listar-usuarios')
-      
+
+      localStorage.setItem("token", token);
+      navigate("/listar-usuarios");
     } catch (error) {
       alert("Senha e/ou e-mail incorretos!");
     }
@@ -28,7 +27,7 @@ function Login() {
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
         Login
       </h2>
-      <form className="flex flex-col gap-5" onSubmit={handleSubmit}>       
+      <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
         <input
           ref={emailRef}
           type="email"
@@ -45,14 +44,21 @@ function Login() {
           Login
         </button>
       </form>
+
       <Link
         to="/"
         className="text-blue-700 hover:underline mt-4 block text-center"
       >
         Não tem uma conta? Cadastre-se
       </Link>
+      <Link
+        to="/listar-usuarios"
+        className="text-blue-700 hover:underline mt-4 block text-center"
+      >
+        Veja a lista de usuários
+      </Link>
     </div>
   );
 }
 
-export default Login
+export default Login;

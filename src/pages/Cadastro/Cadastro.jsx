@@ -55,6 +55,12 @@ function Cadastro() {
       >
         Já tem uma conta? Faça login!
       </Link>
+      <Link
+        to="/listar-usuarios"
+        className="text-blue-700 hover:underline mt-4 block text-center"
+      >
+        Veja a lista de usuários
+      </Link>
     </div>
   );
 }
