@@ -53,7 +53,7 @@ function Cadastro() {
         to="/login"
         className="text-blue-700 hover:underline mt-4 block text-center"
       >
-        Já tem uma conta? Faça login
+        Já tem uma conta? Faça login!
       </Link>
     </div>
   );
