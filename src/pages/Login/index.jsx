@@ -10,7 +10,7 @@ function Login() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const {data:token} = await api.post("/login", {        
+      const login = await api.post("/login", {        
         email: emailRef.current.value,
         password: passwordRef.current.value
       });
