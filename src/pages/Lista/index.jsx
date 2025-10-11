@@ -8,6 +8,7 @@ function ListarUsuarios() {
     async function loadUsers() {      
       const user = await api.get("/listar-usuarios");      
       setAllUsers(user);
+      console.log(user)
     }
     loadUsers();
   }, []);
