@@ -7,7 +7,7 @@ function Cadastro() {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  async function handleSubmit(event) {
+  async function cadastrar(event) {
     event.preventDefault();
     try {
       await api.post("/cadastro", {
@@ -26,7 +26,7 @@ function Cadastro() {
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
         Cadastro
       </h2>
-      <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-5" onSubmit={cadastrar}>
         <input
           ref={nameRef}
           type="text"

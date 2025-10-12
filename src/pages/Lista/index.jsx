@@ -11,8 +11,7 @@ function ListarUsuarios() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      });
-      console.log(user)
+      });      
       setAllUsers(user)
     }
     loadUsers();
