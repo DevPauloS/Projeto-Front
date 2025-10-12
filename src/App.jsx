@@ -1,7 +1,7 @@
-import Cadastro from "./pages/Cadastro/Cadastro";
+import Cadastro from "./pages/Cadastro";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Login from "./pages/Login/Login";
-import ListarUsuarios from "./pages/Lista/Lista";
+import Login from "./pages/Login";
+import ListarUsuarios from "./pages/Lista";
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
         <h1 className="text-2xl font-bold text-center">Sistema de Cadastro de Usuários</h1>
       </header>
         <Routes>
-          <Route path="/" element={<ListarUsuarios />} />
+          <Route path="/" element={<Cadastro />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/listar-usuarios" element={<Cadastro />} />
+          <Route path="/listar-usuarios" element={<ListarUsuarios />} />
           
         </Routes>
       </BrowserRouter>

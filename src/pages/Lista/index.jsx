@@ -5,10 +5,15 @@ function ListarUsuarios() {
   const [allUsers, setAllUsers] = useState();
 
   useEffect(() => {
-    async function loadUsers() {      
-      const user = await api.get("/");      
-      setAllUsers(user);      
-      console.log(allUsers)
+    async function loadUsers() {
+      const token = localStorage.getItem('token')
+      const {data: { user }} = await api.get("/listar-usuarios", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log(user)
+      setAllUsers(user)
     }
     loadUsers();
   }, []);
