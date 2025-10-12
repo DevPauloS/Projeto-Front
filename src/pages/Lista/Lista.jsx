@@ -6,7 +6,7 @@ function ListarUsuarios() {
 
   useEffect(() => {
     async function loadUsers() {      
-      const user = await api.get("/listar-usuarios");      
+      const user = await api.get("/");      
       setAllUsers(user);      
       console.log(allUsers)
     }
