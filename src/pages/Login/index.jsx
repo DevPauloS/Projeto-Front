@@ -51,13 +51,7 @@ function Login() {
         className="text-blue-700 hover:underline mt-4 block text-center"
       >
         Não tem uma conta? Cadastre-se
-      </Link>
-      <Link
-        to="/listar-usuarios"
-        className="text-blue-700 hover:underline mt-4 block text-center"
-      >
-        Veja a lista de usuários
-      </Link>
+      </Link>     
     </div>
   );
 }
