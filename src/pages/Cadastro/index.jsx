@@ -9,12 +9,21 @@ function Cadastro() {
 
   async function cadastrar(event) {
     event.preventDefault();
+
     try {
+      if (
+        nameRef.current.value === "" &&
+        emailRef.current.value === "" &&
+        passwordRef.current.value === ""
+      ) {
+        return false;
+      }
       await api.post("/cadastro", {
         name: nameRef.current.value,
         email: emailRef.current.value,
         password: passwordRef.current.value,
       });
+
       alert("Usuário cadastrado");
     } catch (error) {
       alert("Erro ao cadastrar usuário");
