@@ -16,6 +16,7 @@ function Cadastro() {
         emailRef.current.value === "" &&
         passwordRef.current.value === ""
       ) {
+        alert("Preencha os campos necessários!")
         return false;
       }
       await api.post("/cadastro", {
