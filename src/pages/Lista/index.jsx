@@ -25,13 +25,6 @@ function ListarUsuarios() {
         Lista de Usuários Criados
       </h2>
       <ul className="space-y-2">
-        {!allUsers && (
-          <li className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
-            <p className="text-blue-400 block font-bold">
-              Nenhum usuário encontrado!
-            </p>
-          </li>
-        )}
         {allUsers &&
           allUsers.length > 0 &&
           allUsers.map((user) => (
@@ -44,6 +37,13 @@ function ListarUsuarios() {
               {/* <p className="text-blue-400 block font-bold">E-mail: {user.email}</p> */}
             </li>
           ))}
+        {!allUsers && (
+          <li className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
+            <p className="text-blue-400 block font-bold">
+              Nenhum usuário encontrado!
+            </p>
+          </li>
+        )}
       </ul>
     </div>
   );
