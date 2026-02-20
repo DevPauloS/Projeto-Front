@@ -20,7 +20,7 @@ function ListarUsuarios() {
   return (
     <div className="max-w-md mx-auto mt-10 bg-gray-300 p-8 border border-gray-300 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6 text-center text-blue-400">
-        Lista de Usuários
+        Lista de Usuários Criados
       </h2>
       <ul className="space-y-2">
         {allUsers &&
@@ -29,7 +29,7 @@ function ListarUsuarios() {
             <li key={user.id} className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
               {/* <p className="font-semibold">ID: {user.id}</p> */}
               <p className="text-blue-400 block font-bold">Nome: {user.name}</p>
-              <p className="text-blue-400 block font-bold">E-mail: {user.email}</p>
+              {/* <p className="text-blue-400 block font-bold">E-mail: {user.email}</p> */}
             </li>
           ))}
       </ul>
