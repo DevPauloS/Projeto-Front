@@ -6,13 +6,15 @@ function ListarUsuarios() {
 
   useEffect(() => {
     async function loadUsers() {
-      const token = localStorage.getItem('token')
-      const {data: { user }} = await api.get("/listar-usuarios", {
+      const token = localStorage.getItem("token");
+      const {
+        data: { user },
+      } = await api.get("/listar-usuarios", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      });      
-      setAllUsers(user)
+      });
+      setAllUsers(user);
     }
     loadUsers();
   }, []);
@@ -23,18 +25,25 @@ function ListarUsuarios() {
         Lista de Usuários Criados
       </h2>
       <ul className="space-y-2">
+        {!allUsers && (
+          <li className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
+            <p className="text-blue-400 block font-bold">
+              Nenhum usuário encontrado!
+            </p>
+          </li>
+        )}
         {allUsers &&
           allUsers.length > 0 &&
           allUsers.map((user) => (
-            <li key={user.id} className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
+            <li
+              key={user.id}
+              className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg"
+            >
               {/* <p className="font-semibold">ID: {user.id}</p> */}
               <p className="text-blue-400 block font-bold">Nome: {user.name}</p>
               {/* <p className="text-blue-400 block font-bold">E-mail: {user.email}</p> */}
             </li>
           ))}
-          {!allUsers && <li className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">              
-              <p className="text-blue-400 block font-bold">Nenhum usuário encontrado!</p>              
-            </li>}
       </ul>
     </div>
   );
