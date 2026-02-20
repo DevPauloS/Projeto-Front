@@ -40,19 +40,19 @@ function Cadastro() {
           ref={nameRef}
           type="text"
           placeholder="Nome"
-          className="w-full px-3 py-2 border border-blue-400 rounded-4xl focus:outline-none text-gray-900 font-bold"
+          className="w-full px-3 py-2 bg-gradient-to-r from-blue-200 to-pink-200 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
         <input
           ref={emailRef}
           type="email"
           placeholder="Email"
-          className="w-full px-3 py-2 border border-blue-400 rounded-4xl focus:outline-none text-gray-900 font-bold"
+          className="w-full px-3 py-2 bg-gradient-to-r from-blue-200 to-pink-200 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
         <input
           ref={passwordRef}
           type="password"
           placeholder="Senha"
-          className="w-full px-3 py-2 border border-blue-400 rounded-4xl focus:outline-none text-gray-900 font-bold"
+          className="w-full px-3 py-2 bg-gradient-to-r from-blue-200 to-pink-200 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
         <button className="w-full  bg-gradient-to-r from-blue-400 to-pink-400 text-gray-600 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400 cur
         sor-pointer">
