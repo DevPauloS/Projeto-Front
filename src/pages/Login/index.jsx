@@ -24,29 +24,29 @@ function Login() {
   }
 
   return (
-    <div className="flex w-100 h-10 items-center justify-center">
+    <div className="flex w-150 h-10 items-center justify-end">
       
-      <form className="flex flex-row gap-1" onSubmit={handleSubmit}>
+      <form className="flex flex-row gap-1"  onSubmit={handleSubmit}>
         <input
           ref={emailRef}
           type="email"
           placeholder="Email"
-          className="w-1/2 px-1 py-1 border border-gray-600 rounded-4xl focus:outline-none text-black"
+          className=" px-1 py-1 border w-40 border-gray-600 rounded-4xl focus:outline-none text-black"
         />
         <input
           ref={passwordRef}
           type="password"
           placeholder="Senha"
-          className="w-1/2 px-1 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
+          className="px-1 py-2 border w-40 border-gray-600 rounded-4xl focus:outline-none text-black"
         />
-        <button className="w-1/2  bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400">
+        <button className="w-30 bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400">
           Login
         </button>
-        <button onClick={() => navigate("/cadastro")} className="w-1/2  bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400"
+      </form>  
+        <button onClick={() => navigate("/cadastro")} className="w-1/2 h-10 m-1 w-30 bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400"
       >
        Cadastre-se      
       </button>
-      </form>  
       
     </div>
   );

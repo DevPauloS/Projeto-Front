@@ -55,16 +55,10 @@ function Cadastro() {
           placeholder="Senha"
           className="w-full px-3 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
         />
-        <button className="w-full  bg-gradient-to-r from-blue-400 to-pink-300 text-gray-100 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400">
+        <button className="w-full  bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400">
           Cadastrar
         </button>
-      </form>
-      <Link
-        to="/"
-        className="text-blue-400 hover:underline mt-4 block text-center font-bold"
-      >
-        Já tem uma conta? Faça login!
-      </Link>
+      </form>      
     </div>
   );
 }

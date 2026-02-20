@@ -14,10 +14,7 @@ function App() {
         >
           <Link to="/" className="text-pink-600">
             <House />
-          </Link>
-          <h1 className="text-2xl font-bold text-center text-blue-200">
-            Sistema de Cadastro de Usuários
-          </h1>   
+          </Link>          
           <Login/>       
         </header>
         <Routes>
