@@ -7,12 +7,12 @@ function ListarUsuarios() {
   useEffect(() => {
     async function loadUsers() {
       const token = localStorage.getItem('token')
-      const {data: { userFiltrado }} = await api.get("/listar-usuarios", {
+      const {data: { user }} = await api.get("/listar-usuarios", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });      
-      setAllUsers(userFiltrado)
+      setAllUsers(user)
     }
     loadUsers();
   }, []);
@@ -25,10 +25,10 @@ function ListarUsuarios() {
       <ul className="space-y-2">
         {allUsers &&
           allUsers.length > 0 &&
-          allUsers.map((userFiltrado) => (
-            <li key={userFiltrado.id} className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
+          allUsers.map((user) => (
+            <li key={user.id} className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
               {/* <p className="font-semibold">ID: {user.id}</p> */}
-              <p className="text-blue-400 block font-bold">Nome: {userFiltrado.name}</p>
+              <p className="text-blue-400 block font-bold">Nome: {user.name}</p>
               {/* <p className="text-blue-400 block font-bold">E-mail: {user.email}</p> */}
             </li>
           ))}
