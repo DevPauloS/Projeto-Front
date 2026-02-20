@@ -32,7 +32,9 @@ function ListarUsuarios() {
               {/* <p className="text-blue-400 block font-bold">E-mail: {user.email}</p> */}
             </li>
           ))}
-          {allUsers.length < 1 && <p className="text-gray-500">Nenhum usuário encontrado.</p>}
+          {!allUsers && <li className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">              
+              <p className="text-blue-400 block font-bold">Nenhum usuário encontrado!</p>              
+            </li>}
       </ul>
     </div>
   );
