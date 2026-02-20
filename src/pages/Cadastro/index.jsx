@@ -22,13 +22,13 @@ function Cadastro() {
       await api.post("/cadastro", {
         name: nameRef.current.value,
         email: emailRef.current.value,
-        password: passwordRef.current.value,
+        password: passwordRef.current.value,        
       });
-
       alert("Usuário cadastrado");
     } catch (error) {
       alert("Erro ao cadastrar usuário");
     }
+    console.log(nameRef.current.value, emailRef.current.value, passwordRef.current.value);
   }
 
   return (
@@ -60,7 +60,7 @@ function Cadastro() {
         </button>
       </form>
       <Link
-        to="/login"
+        to="/"
         className="text-blue-400 hover:underline mt-4 block text-center font-bold"
       >
         Já tem uma conta? Faça login!

@@ -14,44 +14,40 @@ function Login() {
         email: emailRef.current.value,
         password: passwordRef.current.value,
       });
-
       alert("Login bem sucedido!");
       localStorage.setItem("token", token);
       navigate("/listar-usuarios");
     } catch (error) {
       alert("Senha e/ou e-mail incorretos!");
     }
+    console.log(emailRef.current.value, passwordRef.current.value);
   }
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-gray-300 p-8 border border-gray-300 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-center text-blue-400">
-        Login
-      </h2>
-      <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+    <div className="flex w-100 h-10 items-center justify-center">
+      
+      <form className="flex flex-row gap-1" onSubmit={handleSubmit}>
         <input
           ref={emailRef}
           type="email"
           placeholder="Email"
-          className="w-full px-3 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
+          className="w-1/2 px-1 py-1 border border-gray-600 rounded-4xl focus:outline-none text-black"
         />
         <input
           ref={passwordRef}
           type="password"
           placeholder="Senha"
-          className="w-full px-3 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
+          className="w-1/2 px-1 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
         />
-        <button className="w-full  bg-gradient-to-r from-blue-400 to-pink-300 text-gray-100 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400">
+        <button className="w-1/2  bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400">
           Login
         </button>
-      </form>
-
-      <Link
-        to="/"
-        className="text-blue-400 hover:underline mt-4 block text-center font-bold"
+        <button onClick={() => navigate("/cadastro")} className="w-1/2  bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400"
       >
-        Não tem uma conta? Cadastre-se
-      </Link>
+       Cadastre-se      
+      </button>
+      </form>  
+      
     </div>
   );
 }
