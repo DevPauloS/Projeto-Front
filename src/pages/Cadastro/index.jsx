@@ -54,7 +54,7 @@ function Cadastro() {
           placeholder="Senha"
           className="w-full px-3 py-2 bg-gradient-to-r from-blue-200 to-pink-200 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
-        <button className="w-full  bg-gradient-to-r from-blue-400 to-pink-400 text-gray-600 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400 cur
+        <button className="w-full  bg-gradient-to-r from-blue-200 to-pink-200 text-gray-600 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400 cur
         sor-pointer">
           Cadastrar
         </button>
