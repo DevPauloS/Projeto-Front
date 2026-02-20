@@ -6,9 +6,9 @@ export default function Inicial() {
       <h1 className="text-7xl font-bold text-blue-900">
         PAGINA INICIAL EM ELABORAÇÃO!
       </h1>
-      <Link to="/listar-usuarios" className="text-6xl text-pink-600 font-bold">
+      {/* <Link to="/listar-usuarios" className="text-6xl text-pink-600 font-bold">
         Listar Usuários
-      </Link>
+      </Link> */}
     </div>
   );
 }
