@@ -15,8 +15,7 @@ function Login() {
         password: passwordRef.current.value,
       });
       alert("Login bem sucedido!");      
-      localStorage.setItem("token", token);
-      informacoes(emailRef.current.value);
+      localStorage.setItem("token", token);      
       navigate("/listar-usuarios");
     } catch (error) {
       alert("Senha e/ou e-mail incorretos!");
