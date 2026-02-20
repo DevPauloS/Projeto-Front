@@ -21,7 +21,7 @@ function App() {
           
           {/* <Route path="/" element={<Login />} /> */}
           <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/listar-usuarios" element={<ListarUsuarios />} />
+          <Route path="/" element={<ListarUsuarios />} />
         </Routes>
       </BrowserRouter>
     </>
