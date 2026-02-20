@@ -10,18 +10,29 @@ function Login() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const { data: token } = await api.post("/login", {
+      const { data : token } = await api.post("/login", {
         email: emailRef.current.value,
         password: passwordRef.current.value,
       });
-      alert("Login bem sucedido!");
+      alert("Login bem sucedido!");      
       localStorage.setItem("token", token);
+      informacoes(emailRef.current.value);
       navigate("/listar-usuarios");
     } catch (error) {
       alert("Senha e/ou e-mail incorretos!");
     }    
   }
-
+  async function informacoes(email) {
+    try {
+      const { data : token} = await api.post("/listar-usuario", {
+        email: emailRef.current.value
+      });          
+      localStorage.setItem("token", token);   
+      console.log(token)        
+    } catch (error) {
+      alert("Nenhum usuário encontrado!");
+    }    
+  }
   return (
     <div className="flex w-150 h-10 items-center justify-end">
       
