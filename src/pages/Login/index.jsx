@@ -29,19 +29,19 @@ function Login() {
           ref={emailRef}
           type="email"
           placeholder="Email"
-          className=" px-1 py-1 border w-40 border-blue-400 rounded-4xl focus:outline-none text-white font-bold"
+          className=" px-2 py-1 border w-40 border-gray-500 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
         <input
           ref={passwordRef}
           type="password"
           placeholder="Senha"
-          className="px-1 py-2 text-white border w-40 border-blue-400 rounded-4xl focus:outline-none font-bold"
+          className="px-2 py-2 border w-40 border-gray-500 rounded-4xl focus:outline-none font-bold text-gray-900"
         />
-        <button className="w-30 bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400">
+        <button className="w-30 bg-gradient-to-r from-blue-400 to-pink-400 text-gray-600 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400">
           Login
         </button>
       </form>  
-        <button onClick={() => navigate("/cadastro")} className="h-10 m-1 w-30 bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400"
+        <button onClick={() => navigate("/cadastro")} className="h-10 m-1 w-30 bg-gradient-to-r from-blue-400 to-pink-400 text-gray-600 font-bold py-1 px-1 rounded-4xl hover:bg-blue-400"
       >
        Cadastre-se      
       </button>

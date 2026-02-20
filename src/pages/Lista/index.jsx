@@ -20,8 +20,8 @@ function ListarUsuarios() {
   }, []);
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-gray-300 p-8 border border-gray-300 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-center text-blue-400">
+    <div className="max-w-md mx-auto mt-10 p-8 bg-gradient-to-r from-blue-300 to-pink-300 rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-600">
         Lista de Usuários Criados
       </h2>
       <ul className="space-y-2">
@@ -30,16 +30,16 @@ function ListarUsuarios() {
           allUsers.map((user) => (
             <li
               key={user.id}
-              className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg"
+              className="p-4 bg-gradient-to-r from-blue-200 to-pink-200 rounded-lg shadow-lg text-gray-600"
             >
               {/* <p className="font-semibold">ID: {user.id}</p> */}
-              <p className="text-blue-400 block font-bold">Nome: {user.name}</p>
+              <p className="block font-bold text-gray-600">Nome: {user.name}</p>
               {/* <p className="text-blue-400 block font-bold">E-mail: {user.email}</p> */}
             </li>
           ))}
         {!allUsers && (
-          <li className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
-            <p className="text-blue-400 block font-bold">
+          <li className="p-4 bg-gradient-to-r from-blue-200 to-pink-200 rounded-lg shadow-lg">
+            <p className="text-gray-600 block font-bold">
               Nenhum usuário encontrado!
             </p>
           </li>

@@ -31,8 +31,8 @@ function Cadastro() {
   }
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-gray-300 p-8 border border-gray-300 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-center text-blue-400">
+    <div className="max-w-md mx-auto mt-10 p-8 bg-gradient-to-r from-blue-300 to-pink-300 rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-600">
         Cadastro
       </h2>
       <form className="flex flex-col gap-5" onSubmit={cadastrar}>
@@ -40,21 +40,22 @@ function Cadastro() {
           ref={nameRef}
           type="text"
           placeholder="Nome"
-          className="w-full px-3 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
+          className="w-full px-3 py-2 border border-blue-400 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
         <input
           ref={emailRef}
           type="email"
           placeholder="Email"
-          className="w-full px-3 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
+          className="w-full px-3 py-2 border border-blue-400 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
         <input
           ref={passwordRef}
           type="password"
           placeholder="Senha"
-          className="w-full px-3 py-2 border border-gray-600 rounded-4xl focus:outline-none text-black"
+          className="w-full px-3 py-2 border border-blue-400 rounded-4xl focus:outline-none text-gray-900 font-bold"
         />
-        <button className="w-full  bg-gradient-to-r from-blue-400 to-pink-500 text-gray-100 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400">
+        <button className="w-full  bg-gradient-to-r from-blue-400 to-pink-400 text-gray-600 font-bold py-2 px-4 rounded-4xl hover:bg-blue-400 cur
+        sor-pointer">
           Cadastrar
         </button>
       </form>      

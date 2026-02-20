@@ -10,10 +10,10 @@ function App() {
     <>
       <BrowserRouter>
         <header
-          className="from-blue-500 to-indigo-700
- text-white p-4 shadow-md flex justify-between"
+          className="from-blue-200 to-pink-200
+ text-gray-900 p-4 shadow-md flex justify-between"
         >
-          <Link to="/" className="text-pink-600">
+          <Link to="/" className="text-gray-900">
             <House />
           </Link>          
           <Login/>       
