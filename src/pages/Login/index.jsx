@@ -21,18 +21,7 @@ function Login() {
     } catch (error) {
       alert("Senha e/ou e-mail incorretos!");
     }    
-  }
-  async function informacoes(email) {
-    try {
-      const { data : token} = await api.post("/listar-usuario", {
-        email: emailRef.current.value
-      });          
-      localStorage.setItem("token", token);   
-      console.log(token)        
-    } catch (error) {
-      alert("Nenhum usuário encontrado!");
-    }    
-  }
+  }  
   return (
     <div className="flex w-150 h-10 items-center justify-end">
       
