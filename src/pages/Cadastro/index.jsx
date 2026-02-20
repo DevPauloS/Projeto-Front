@@ -27,8 +27,7 @@ function Cadastro() {
       alert("Usuário cadastrado");
     } catch (error) {
       alert("Erro ao cadastrar usuário");
-    }
-    console.log(nameRef.current.value, emailRef.current.value, passwordRef.current.value);
+    }    
   }
 
   return (

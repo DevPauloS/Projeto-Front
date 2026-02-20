@@ -19,8 +19,7 @@ function Login() {
       navigate("/listar-usuarios");
     } catch (error) {
       alert("Senha e/ou e-mail incorretos!");
-    }
-    console.log(emailRef.current.value, passwordRef.current.value);
+    }    
   }
 
   return (

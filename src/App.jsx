@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import ListarUsuarios from "./pages/Lista";
 import { House } from "lucide-react";
+import Inicial from "./pages/Inicial";
 
 function App() {
   return (
@@ -16,12 +17,12 @@ function App() {
             <House />
           </Link>          
           <Login/>       
-        </header>
+        </header>        
         <Routes>
           
-          {/* <Route path="/" element={<Login />} /> */}
+          <Route path="/" element={<Inicial />} />
           <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/" element={<ListarUsuarios />} />
+          <Route path="/listar-usuarios" element={<ListarUsuarios />} />
         </Routes>
       </BrowserRouter>
     </>
