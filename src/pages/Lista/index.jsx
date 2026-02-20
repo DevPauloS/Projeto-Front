@@ -26,7 +26,7 @@ function ListarUsuarios() {
         {allUsers &&
           allUsers.length > 0 &&
           allUsers.map((userFiltrado) => (
-            <li key={userFiltrado.name} className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
+            <li key={userFiltrado.id} className="bg-gray-300 p-4 border border-gray-300 rounded-lg shadow-lg">
               {/* <p className="font-semibold">ID: {user.id}</p> */}
               <p className="text-blue-400 block font-bold">Nome: {userFiltrado.name}</p>
               {/* <p className="text-blue-400 block font-bold">E-mail: {user.email}</p> */}
